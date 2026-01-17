@@ -1,7 +1,7 @@
 {
-  "Group": "dev.hytalemodding",
-  "Name": "ExamplePlugin",
-  "Version": "${version}",
+  "Group": "{{ group }}",
+  "Name": "{{ name }}",
+  "Version": "{{ version }}",
   "Description": "Description of your plugin",
   "Authors": [
     {
@@ -15,6 +15,6 @@
   "Dependencies": {},
   "OptionalDependencies": {},
   "DisabledByDefault": false,
-  "IncludesAssetPack": false,
+  "IncludesAssetPack": {{ asset_pack }},
   "Main": "dev.hytalemodding.ExamplePlugin"
 }

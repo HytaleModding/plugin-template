@@ -3,9 +3,11 @@
 plugins {
     java
     id("com.gradleup.shadow") version "9.3.1"
+    id("net.kyori.blossom") version "2.2.0"
 }
 
-group "dev.hytalemodding"
+group = "dev.hytalemodding"
+version = rootProject.version
 
 val java_version: String by project
 val patch_line: String by project
@@ -39,11 +41,6 @@ dependencies {
     compileOnly(files("$hytale_install/Server/HytaleServer.jar"))
     compileOnly("org.jetbrains:annotations:26.0.2-1")
 }
-
-sourceSets.configureEach {
-    resources.exclude(".idea/**")
-}
-
 
 tasks {
 
@@ -81,4 +78,21 @@ tasks {
     }
 
     clean { delete(server_run_dir) }
+}
+
+sourceSets {
+    configureEach {
+        resources.exclude(".idea/**")
+    }
+
+    main {
+        blossom {
+            resources {
+                property("version", project.version.toString())
+                property("name", project.name.toString())
+                property("asset_pack", includes_pack)
+                property("group", project.group.toString())
+            }
+        }
+    }
 }
