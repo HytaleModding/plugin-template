@@ -1,4 +1,4 @@
-# Hytale Plgin template
+# Hytale Plugin template
 
 ## How to build
 
