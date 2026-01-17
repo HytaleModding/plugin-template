@@ -37,3 +37,11 @@ build/
 
 ### Mac OS ###
 .DS_Store
+
+### Gradle ###
+.gradle
+**/build/
+!**/src/**/build/
+
+### Server Run Directory ###
+/run
