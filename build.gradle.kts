@@ -1,15 +1,11 @@
-plugins {
-    java
-}
-
-group = "dev.hytalemodding"
-version = "0.0.1"
-
+/**
+ * NOTE: This is entirely optional and basics can be done in `settings.gradle.kts`
+ */
 
 repositories {
-    mavenCentral()
+    // Any external repositories besides: MavenLocal, MavenCentral, HytaleMaven, and CurseMaven
 }
 
 dependencies {
-    // Any dependency you also want to include
+    // Any external dependency you also want to include
 }

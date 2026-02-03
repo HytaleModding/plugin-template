@@ -2,13 +2,24 @@ rootProject.name = "dev.hytalemodding"
 
 plugins {
     // See documentation on https://scaffoldit.dev
-    id("dev.scaffoldit") version "0.2.2"
+    id("dev.scaffoldit") version "0.2.4"
 }
 
-//
-// Automatically configures the builds, but you can switch scripts if you wish!
-//
+// Would you like to do a split project?
+// Create a folder named "common", then configure details with `common { }`
+
 hytale {
+    usePatchline("release")
+    useVersion("+")
+
+    repositories {
+        // Any external repositories besides: MavenLocal, MavenCentral, HytaleMaven, and CurseMaven
+    }
+
+    dependencies {
+        // Any external dependency you also want to include
+    }
+
     manifest {
         Group = "HytaleModding"
         Name = "ExamplePlugin"
