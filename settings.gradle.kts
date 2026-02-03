@@ -2,7 +2,7 @@ rootProject.name = "dev.hytalemodding"
 
 plugins {
     // See documentation on https://scaffoldit.dev
-    id("dev.scaffoldit") version "0.2.4"
+    id("dev.scaffoldit") version "0.2.+"
 }
 
 // Would you like to do a split project?
@@ -10,7 +10,7 @@ plugins {
 
 hytale {
     usePatchline("release")
-    useVersion("+")
+    useVersion("latest")
 
     repositories {
         // Any external repositories besides: MavenLocal, MavenCentral, HytaleMaven, and CurseMaven
